@@ -2,109 +2,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonnie Yen | Business Analytics Portfolio</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f5f8fc;
-            color: #2b2b2b;
-        }
-        header {
-            background: #1d3557;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        nav {
-            background: #457b9d;
-            text-align: center;
-            padding: 0.5rem;
-        }
-        nav a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-        }
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 2rem;
-        }
-        .project {
-            background: white;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-left: 5px solid #1d3557;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-        }
-        .project h3 {
-            margin-top: 0;
-        }
-        footer {
-            background: #1d3557;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 3rem;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bonnie Yen | Portfolio</title>
+  <style>
+    :root {
+      --main-color: #6c63ff;
+      --accent-color: #ffb347;
+      --bg-color: #fffaf5;
+      --text-color: #333;
+    }
 
-        @media (max-width: 600px) {
-            header, .container, nav, footer {
-                padding: 1rem;
-            }
-        }
-    </style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background: var(--main-color);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    nav {
+      background: white;
+      text-align: center;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--main-color);
+      font-weight: bold;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .hero .photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: lightgray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: gray;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .hero .intro {
+      max-width: 500px;
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .project {
+      background: white;
+      margin-bottom: 1.5rem;
+      padding: 1rem 1.5rem;
+      border-left: 5px solid var(--accent-color);
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      background: var(--main-color);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Bonnie Yen</h1>
-        <p>Business Analyst & Data Storyteller</p>
-        <p>📍 Salem, OR | ✉️ bonnb2010@gmail.com | <a href="https://www.linkedin.com" style="color: #a8dadc;">LinkedIn</a></p>
-    </header>
 
-    <nav>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-    </nav>
+  <header>
+    <h1>Bonnie Yen</h1>
+    <p>Business Analyst | Data Storyteller | Dessert Enthusiast</p>
+  </header>
 
-    <div class="container">
-        <section id="projects">
-            <h2>Projects</h2>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+  </nav>
 
-            <div class="project">
-                <h3>Nike Sales & Inventory Optimization</h3>
-                <p><strong>Tools:</strong> Python, Tableau | <strong>Data:</strong> 9,184 transactions</p>
-                <p>Built an OLS regression model (R² = 0.94) and created Tableau dashboards to forecast sales and identify stockout regions.</p>
-            </div>
+  <section class="hero">
+    <div class="photo">Your Photo</div>
+    <div class="intro">
+      <h2>Hello, I'm Bonnie!</h2>
+      <p>I analyze data, optimize decisions, and occasionally win awards for cheesecakes. Currently pursuing my MS in Business Analytics at Oregon State University.</p>
+    </div>
+  </section>
 
-            <div class="project">
-                <h3>Enterprise Rent-A-Car Fleet Optimization</h3>
-                <p><strong>Tools:</strong> SQL (MySQL) | <strong>Data:</strong> 13,287 reservation records</p>
-                <p>Developed a MySQL database to manage vehicle inventory and booking data; wrote queries to detect availability gaps and optimize fleet use.</p>
-            </div>
+  <section class="section" id="projects">
+    <h2>Selected Projects</h2>
 
-            <div class="project">
-                <h3>Automated Loan Approval System</h3>
-                <p><strong>Tools:</strong> RapidMiner | <strong>Data:</strong> 10,241 customer profiles</p>
-                <p>Built a classification model for loan approval automation using income, mortgage, and credit card usage; achieved 88.6% accuracy.</p>
-            </div>
-        </section>
-
-        <section id="resume">
-            <h2>Resume</h2>
-            <p><a href="#" target="_blank">Download Resume (PDF)</a></p>
-        </section>
+    <div class="project">
+      <h3>Nike Sales & Inventory Optimization</h3>
+      <p><strong>Tools:</strong> Python, Tableau | <strong>Data:</strong> 9,184 transactions</p>
+      <p>Built an OLS regression model (R² = 0.94) and created dashboards to forecast sales and locate stockout regions across the U.S.</p>
     </div>
 
-    <footer>
-        &copy; 2025 Bonnie Yen | Portfolio
-    </footer>
+    <div class="project">
+      <h3>Enterprise Rent-A-Car Fleet System</h3>
+      <p><strong>Tools:</strong> MySQL | <strong>Data:</strong> 13,287 records</p>
+      <p>Designed a relational database and query logic to track reservations and improve fleet distribution efficiency by location and season.</p>
+    </div>
+
+    <div class="project">
+      <h3>Automated Loan Approval System</h3>
+      <p><strong>Tools:</strong> RapidMiner | <strong>Data:</strong> 10,241 customer records</p>
+      <p>Built and tuned a loan classification model (95.8% accuracy) using key financial features for early-stage decision support.</p>
+    </div>
+  </section>
+
+  <section class="section" id="resume">
+    <h2>Download My Resume</h2>
+    <p><a href="BONNIE%20YEN%20Resume.pdf" download>Click here to download PDF</a></p>
+  </section>
+
+  <footer>
+    © 2025 Bonnie Yen | Made with 💜 and too much Tableau
+  </footer>
 </body>
 </html>
